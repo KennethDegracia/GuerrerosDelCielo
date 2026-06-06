@@ -1,0 +1,243 @@
+/* ================= RESET ================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:
+linear-gradient(rgba(5,7,15,.92),rgba(5,7,15,.98)),
+url("fitness.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+color:white;
+line-height:1.6;
+}
+
+/* ================= HEADER ================= */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:15px 40px;
+
+background:rgba(10,12,20,.6);
+backdrop-filter:blur(12px);
+
+z-index:9999;
+}
+
+header .logo{
+display:flex;
+align-items:center;
+gap:10px;
+text-decoration:none;
+color:white;
+font-weight:700;
+}
+
+header .logo img{
+width:38px;
+height:38px;
+object-fit:contain;
+}
+
+nav a{
+color:#cfcfcf;
+text-decoration:none;
+margin-left:20px;
+transition:.3s;
+font-weight:500;
+}
+
+nav a:hover{
+color:#00d4ff;
+}
+
+/* ================= HERO ADS ================= */
+
+.ad-hero{
+height:70vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.9)),
+url("workout6.jpg");
+
+background-size:cover;
+background-position:center;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.ad-hero h1{
+font-size:3.2rem;
+font-weight:900;
+margin-bottom:15px;
+text-shadow:0 0 25px rgba(0,212,255,.3);
+}
+
+.ad-hero p{
+max-width:700px;
+font-size:1.1rem;
+color:#d0d0d0;
+margin-bottom:25px;
+}
+
+/* ================= VARIACIONES HERO ================= */
+
+.ad-hero.bro{
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.95)),
+url("workout4.jpg");
+background-size:cover;
+background-position:center;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.ad-hero.upper{
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.95)),
+url("workout5.jpg");
+background-size:cover;
+background-position:center;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+/* ================= BOTÓN CTA ================= */
+
+.cta{
+display:inline-block;
+
+padding:14px 26px;
+
+background:linear-gradient(135deg,#00d4ff,#0099ff);
+color:black;
+
+font-weight:800;
+text-decoration:none;
+
+border-radius:12px;
+
+box-shadow:
+0 0 20px rgba(0,212,255,.4);
+
+transition:.3s ease;
+
+letter-spacing:.5px;
+}
+
+.cta:hover{
+transform:scale(1.08);
+box-shadow:
+0 0 30px rgba(0,212,255,.7);
+}
+
+/* ================= CONTENIDO ================= */
+
+.ad-content{
+max-width:900px;
+margin:80px auto;
+padding:30px;
+
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:20px;
+
+backdrop-filter:blur(10px);
+}
+
+.ad-content h2{
+color:#00d4ff;
+margin-top:25px;
+margin-bottom:10px;
+
+font-size:1.5rem;
+border-left:4px solid #00d4ff;
+padding-left:10px;
+}
+
+.ad-content p{
+color:#d0d0d0;
+margin-bottom:15px;
+}
+
+.ad-content ul{
+padding-left:25px;
+line-height:1.9;
+}
+
+.ad-content li{
+margin-bottom:8px;
+color:#e6e6e6;
+}
+
+/* ================= SEPARADORES ================= */
+
+.ad-content hr{
+border:none;
+height:1px;
+background:rgba(255,255,255,.12);
+margin:25px 0;
+}
+
+/* ================= EFECTOS ================= */
+
+.ad-content h2:hover{
+text-shadow:0 0 20px rgba(0,212,255,.3);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:10px;
+padding:15px 20px;
+}
+
+nav a{
+margin-left:10px;
+font-size:.9rem;
+}
+
+.ad-hero h1{
+font-size:2.2rem;
+}
+
+.ad-content{
+margin:40px 15px;
+padding:20px;
+}
+
+.cta{
+padding:12px 20px;
+font-size:.9rem;
+}
+}

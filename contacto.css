@@ -1,0 +1,249 @@
+/* =========================
+   PAGINA DE CONTACTO
+========================= */
+
+.contact-page{
+
+     min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:120px 20px 80px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600&auto=format&fit=crop");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
+
+/* TARJETA */
+
+.contact-card{
+
+    width:100%;
+
+    max-width:850px;
+
+    padding:60px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.4);
+
+    transition:0.3s;
+}
+
+.contact-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 15px 50px rgba(0,0,0,0.5);
+}
+
+/* ICONO */
+
+.contact-icon{
+
+    font-size:5rem;
+
+    margin-bottom:20px;
+}
+
+/* TITULO */
+
+.contact-card h1{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+    color:white;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+}
+
+/* SUBTITULO */
+
+.subtitle{
+
+    color:#d6d6d6;
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+}
+
+/* BLOQUES */
+
+.contact-item{
+
+    margin:25px 0;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,0.03);
+
+    transition:0.3s;
+}
+
+.contact-item:hover{
+
+    background:rgba(255,255,255,0.08);
+}
+
+/* TITULOS DE BLOQUE */
+
+.contact-item h3{
+
+    color:#00d4ff;
+
+    margin-bottom:10px;
+
+    font-size:1.3rem;
+}
+
+/* TEXTO */
+
+.contact-item p{
+
+    color:#f0f0f0;
+
+    line-height:1.7;
+}
+
+/* LINKS */
+
+.contact-item a{
+
+    color:#00d4ff;
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+.contact-item a:hover{
+
+    text-decoration:underline;
+}
+
+/* EFECTO ENTRADA */
+
+.contact-card{
+
+    animation:fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .contact-card{
+
+        padding:35px 25px;
+    }
+
+    .contact-card h1{
+
+        font-size:2.2rem;
+    }
+
+    .contact-icon{
+
+        font-size:4rem;
+    }
+
+    .subtitle{
+
+        font-size:1rem;
+    }
+
+}
+
+.contact-item i{
+    font-size:1.5rem !important;
+    margin-right:10px;
+    
+}
+.fa-youtube{
+    color:#ff0000 !important;
+    font-size:1.5rem !important;
+}
+
+.fa-envelope{
+    color:#f1f4f5 !important;
+    font-size:1.5rem !important;
+}
+
+.fa-bolt{
+    color:#ffd700 !important;
+    font-size:1.5rem !important;
+}
+
+.fa-dumbbell{
+    color:#070707 !important;
+    font-size:1.5rem !important;
+}
+
+.fa-shield-halved{
+    color:#00d4ff !important;
+    font-size:5rem !important;
+}
+
+.contact-item i:hover{
+
+    transform:scale(1.2);
+
+    filter:drop-shadow(0 0 8px currentColor);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}

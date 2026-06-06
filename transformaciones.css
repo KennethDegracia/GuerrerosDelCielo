@@ -1,0 +1,190 @@
+/* =========================
+   HERO TRANSFORMACIONES
+========================= */
+
+.hero{
+    background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
+    url("transformacion.avif");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+/* =========================
+   TARJETAS ESPECIALES
+========================= */
+
+.feature-card{
+    transition:0.4s;
+}
+
+.feature-card:hover{
+    transform:translateY(-12px);
+
+    box-shadow:
+    0 10px 35px rgba(0,212,255,0.35);
+}
+
+/* =========================
+   PROGRESO
+========================= */
+
+.card{
+    text-align:center;
+}
+
+.card-content h3{
+    font-size:2rem;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+#contacto{
+
+    padding:80px 20px;
+
+    text-align:center;
+
+    background:#05070d;
+
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+#contacto h2{
+
+    color:#00d4ff;
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+}
+
+#contacto p{
+
+    margin:10px 0;
+
+    color:#d0d0d0;
+}
+
+#contacto a{
+
+    color:#00d4ff;
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+#contacto a:hover{
+
+    text-decoration:underline;
+}
+
+/* =========================
+   FRASE BÍBLICA
+========================= */
+
+.quote-section h2{
+
+    max-width:900px;
+
+    margin:auto;
+
+    line-height:1.4;
+}
+
+/* =========================
+   ANIMACIÓN SUAVE
+========================= */
+
+.feature-card,
+.card{
+
+    animation:fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+    
+}
+/* =========================
+   GALERÍA DESLIZANTE
+========================= */
+
+.gallery-section{
+
+    padding:100px 0;
+
+    overflow:hidden;
+}
+
+.slider{
+
+    width:100%;
+
+    overflow:hidden;
+
+    position:relative;
+}
+
+.slide-track{
+
+    display:flex;
+
+    width:calc(300px * 10);
+
+    animation:scroll 25s linear infinite;
+}
+
+.slide-track img{
+
+    width:300px;
+    height:400px;
+
+    object-fit:cover;
+
+    margin:0 15px;
+
+    border-radius:20px;
+
+    border:2px solid rgba(255,255,255,0.1);
+
+    transition:0.4s;
+}
+
+.slide-track img:hover{
+
+    transform:scale(1.05);
+
+    border-color:#00d4ff;
+}
+
+@keyframes scroll{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    100%{
+        transform:translateX(calc(-300px * 5));
+    }
+
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}

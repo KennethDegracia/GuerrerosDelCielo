@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto | Guerreros del Cielo</title>
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS DE CONTACTO -->
+    <link rel="stylesheet" href="contacto.css">
+    
+    <! -- Font Awesome -- >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+      <a href="index.html" class="logo">
+    <img src="logo.png" alt="logo">
+    <span>Guerreros del Cielo</span>
+    </a>
+        
+
+        <nav>
+
+            <a href="index.html">Inicio</a>
+
+            <a href="rutinas.html">Rutinas</a>
+
+            <a href="transformaciones.html">Transformaciones</a>
+
+            <a href="index.html#planes">Planes</a>
+
+            <a href="contacto.html">Contacto</a>
+
+        </nav>
+
+    </header>
+
+    <!-- CONTACTO -->
+
+    <section class="contact-page">
+
+        <div class="contact-card">
+
+          <div class="contact-icon">
+                     <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <h1>Contacto</h1>
+
+            <p class="subtitle">
+
+                Gracias por visitar Guerreros del Cielo.
+
+                Si tienes preguntas, sugerencias o deseas colaborar
+                con nuestro proyecto, puedes comunicarte con nosotros
+                utilizando cualquiera de los siguientes medios.
+
+            </p>
+
+            <div class="contact-item">
+
+                <h3>
+                    
+                    
+                        <i class="fa-solid fa-envelope"></i>
+    Correo Electrónico
+
+
+                </h3>
+
+                <p>
+                    consejosguerrerosdelcielo@gmail.com
+                </p>
+
+            </div>
+
+            <div class="contact-item">
+                
+                
+                <h3>
+                
+                    <i class="fa-brands fa-youtube"></i>
+    Canal de YouTube
+                
+                </h3>
+                
+                <p>
+
+                    <a href="https://www.youtube.com/@bearwhite3603"
+                       target="_blank">
+
+                        https://www.youtube.com/@bearwhite3603
+
+                    </a>
+
+                </p>
+
+            </div>
+
+            <div class="contact-item">
+
+                <h3>
+
+                    <i class="fa-solid fa-bolt"></i>
+    Tiempo de Respuesta
+
+                </h3>
+
+                <p>
+
+                    Intentaremos responder todos los mensajes
+                    tan pronto como sea posible.
+
+                </p>
+
+            </div>
+
+            <div class="contact-item">
+
+                <h3>
+
+                <i class="fa-solid fa-dumbbell"></i>
+                Objetivo
+
+
+                </h3>
+
+                <p>
+
+                    Motivar a mas personas a desarrollar su fuerza fisica, mental y a llevar un estilo de vida saludable.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Copyright ©
+            <span id="year"></span>
+            Guerreros del Cielo | Entrena como una leyenda.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#">Política de privacidad - </a>
+
+            <a href="#">Términos de uso - </a>
+
+            <a href="contacto.html">Contacto</a>
+
+        </div>
+
+        <p class="disclaimer">
+
+            "Sed fuertes y valientes; no temáis." — Josué 1:9
+        
+        </p>
+
+        <p class="disclaimer">
+
+            Este sitio es solo informativo.
+            El entrenamiento físico es responsabilidad del usuario.
+            No reemplaza asesoría médica o profesional.
+
+        </p>
+        
+       
+            <p class="disclaimer">
+
+            Los entrenamientos ofrecen resultados reales
+            basados en estudios recientes de hipertrofia.
+
+        </p>
+
+    </footer>
+
+    <!-- SCRIPT -->
+
+    <script>
+
+        let lastScroll = 0;
+
+        window.addEventListener("scroll", function(){
+
+            const header = document.querySelector("header");
+
+            let currentScroll = window.pageYOffset;
+
+            if(currentScroll > 50){
+
+                header.classList.add("scrolled");
+
+            }else{
+
+                header.classList.remove("scrolled");
+
+            }
+
+            if(currentScroll > lastScroll && currentScroll > 200){
+
+                header.style.transform = "translateY(-100%)";
+
+            }else{
+
+                header.style.transform = "translateY(0)";
+
+            }
+
+            lastScroll = currentScroll;
+
+        });
+
+        document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+    </script>
+
+</body>
+
+</html>

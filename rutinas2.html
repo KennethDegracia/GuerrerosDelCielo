@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Biblioteca de Rutinas | Guerreros del Cielo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="rutinas2.css">
+
+
+</head>
+
+<body>
+
+    <a href="rutinas.html" class="back-home">
+
+    <img src="logo.png" alt="logo">
+
+<span>Regresar</span>
+
+</a>
+
+<header class="hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h1> Biblioteca de Rutinas 💪🏻 </h1>
+
+<p>
+Selecciona una rutina y descubre el programa completo.
+</p>
+
+</div>
+
+</header>
+
+<main>
+
+<section class="grid">
+
+<div class="card" onclick="openRoutine('r1')">
+
+<div class="card-overlay"></div>
+
+<div class="card-content">
+
+<span class="tag advanced">INTERMEDIO / AVANZADO</span>
+
+<h3>💪 PPL / Upper Lower</h3>
+
+<p>
+La mejor rutina para desarrollar un físico grande y estético.
+</p>
+
+</div>
+
+</div>
+
+<div class="card" onclick="openRoutine('r2')">
+
+<div class="card-overlay"></div>
+
+<div class="card-content">
+
+<span class="tag intermediate">INTERMEDIO</span>
+
+<h3> 🔥 Bro Split + PPL </h3>
+
+<p>
+Entrena un grupo muscular por día y exprime cada sesión.
+</p>
+
+</div>
+
+</div>
+
+<div class="card" onclick="openRoutine('r3')">
+
+<div class="card-overlay"></div>
+
+<div class="card-content">
+
+<span class="tag advanced">AVANZADO</span>
+
+<h3>⚡ Heavy Duty</h3>
+
+<p>
+Alta intensidad, pocas series y máxima exigencia.
+</p>
+
+</div>
+
+</div>
+
+<div class="card" onclick="openRoutine('r4')">
+
+<div class="card-overlay"></div>
+
+<div class="card-content">
+
+<span class="tag intermediate">INTERMEDIO</span>
+
+<h3>🏃 Bro Split + HIIT</h3>
+
+<p>
+Hipertrofia y acondicionamiento físico en un mismo plan.
+</p>
+
+</div>
+
+</div>
+
+<div class="card" onclick="openRoutine('r5')">
+
+<div class="card-overlay"></div>
+
+<div class="card-content">
+
+<span class="tag intermediate">INTERMEDIO</span>
+
+<h3> 🔩 Calistenia + Pesas</h3>
+
+<p>
+Alta intensidad y volumen para entrenar en cualquier lugar.
+</p>
+
+</div>
+
+</div>
+
+<div class="card" onclick="openRoutine('r6')">
+
+<div class="card-overlay"></div>
+
+<div class="card-content">
+
+<span class="tag beginner">PRINCIPIANTE</span>
+
+<h3> 💀 Upper / Lower</h3>
+
+<p>
+La forma más eficiente de comenzar a ganar músculo.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<div id="modal" class="modal">
+
+<div class="modal-content">
+
+<button class="back-btn" onclick="closeRoutine()">
+⬅ Regresar
+</button>
+
+<div id="modal-body"></div>
+
+</div>
+
+</div>
+
+<script src="rutinas2.js"></script>
+
+</body>
+</html>

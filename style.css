@@ -1,0 +1,577 @@
+/* =========================
+RESET
+========================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* =========================
+BODY
+========================= */
+body{
+font-family:'Poppins', sans-serif;
+background:#0b0f1a;
+color:white;
+overflow-x:hidden;
+}
+
+/* =========================
+HEADER
+========================= */
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+
+display:flex;  
+justify-content:space-between;  
+align-items:center;  
+
+padding: 10px 8%;  
+background:rgba(0,0,0,0.25);  
+backdrop-filter:blur(14px);  
+
+border-bottom:1px solid rgba(255,255,255,0.08);  
+
+transition:0.4s ease;
+
+}
+
+/* EFECTO AL SCROLL */
+header.scrolled{
+padding:10px 8%;
+background:rgba(0,0,0,0.85);
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* LOGO CON EFECTO */
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+flex-shrink:0;
+}
+
+/* LOGO IMG */
+.logo img{
+height:75px;
+width:auto;
+display:block;
+
+transition:0.4s ease;  
+
+filter: drop-shadow(0 0 10px rgba(0,212,255,0.6));
+
+}
+
+/* EFECTO HOVER LOGO */
+.logo img:hover{
+transform:scale(1.08) rotate(-1deg);
+filter: drop-shadow(0 0 20px rgba(0,212,255,0.9));
+}
+
+/* TEXTO LOGO */
+.logo span{
+font-size:1.5rem;
+font-weight:900;
+color:#00d4ff;
+
+text-shadow:  
+0 0 10px rgba(0,212,255,0.7),  
+0 0 25px rgba(0,212,255,0.4);  
+
+letter-spacing:1px;
+
+}
+
+/* NAV */
+nav{
+display:flex;
+gap:22px;
+align-items:center;
+}
+
+/* LINKS */
+nav a{
+position:relative;
+
+text-decoration:none;  
+color:white;  
+font-weight:500;  
+
+transition:0.3s;  
+padding:5px 0;
+
+}
+
+/* HOVER NEÓN */
+nav a:hover{
+color:#00d4ff;
+transform:translateY(-2px);
+}
+
+/* SUBRAYADO ANIMADO */
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-3px;
+
+width:0%;  
+height:2px;  
+
+background:#00d4ff;  
+
+transition:0.3s ease;
+
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* EFECTO CLICK SUAVE */
+nav a:active{
+transform:scale(0.95);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+nav{  
+    display:none; /* luego podemos hacer menú hamburguesa */  
+}  
+
+.logo img{  
+    height:60px;  
+}  
+
+.logo span{  
+    font-size:1.2rem;  
+}
+
+}
+
+nav a{
+
+text-decoration:none;  
+color:white;  
+margin-left:25px;  
+font-weight:500;  
+transition:0.3s;  
+position:relative;
+
+}
+
+nav a::after{
+
+content:"";  
+position:absolute;  
+left:0;  
+bottom:-6px;  
+width:0;  
+height:2px;  
+background:#00d4ff;  
+transition:0.3s;
+
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* =========================
+HERO
+========================= */
+.hero{
+height:100vh;
+
+display:flex;  
+justify-content:center;  
+align-items:center;  
+text-align:center;  
+padding:20px;  
+
+background:  
+linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),  
+url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1600&auto=format&fit=crop');  
+
+background-size:cover;  
+background-position:center;
+
+}
+
+.hero-content h1{
+font-size:5rem;
+font-weight:900;
+margin-bottom:20px;
+
+color:#00d4ff;  
+
+text-shadow:  
+0 0 20px rgba(0,212,255,0.8),  
+0 0 40px rgba(0,212,255,0.5);
+
+}
+
+.hero-content p{
+max-width:700px;
+margin:auto;
+
+font-size:1.3rem;  
+color:#d9d9d9;  
+
+line-height:1.6;
+
+}
+
+/* =========================
+HERO BUTTON
+========================= */
+.hero-btn{
+display:inline-block;
+
+margin-top:35px;  
+padding:16px 40px;  
+
+border-radius:50px;  
+
+background:linear-gradient(45deg,#00d4ff,#0066ff);  
+
+color:white;  
+text-decoration:none;  
+font-weight:700;  
+
+transition:0.4s;  
+
+box-shadow:0 0 25px rgba(0,212,255,0.5);
+
+}
+
+.hero-btn:hover{
+transform:scale(1.08);
+
+box-shadow:  
+0 0 30px rgba(0,212,255,0.8),  
+0 0 60px rgba(0,212,255,0.4);
+
+}
+
+/* =========================
+SECTIONS
+========================= */
+.features,
+.plans{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+
+font-size:3rem;  
+font-weight:800;  
+
+margin-bottom:60px;  
+
+color:#00d4ff;
+
+}
+
+/* =========================
+FEATURES
+========================= */
+.feature-grid{
+display:grid;
+
+grid-template-columns:  
+repeat(auto-fit,minmax(250px,1fr));  
+
+gap:30px;
+
+}
+
+.feature-card{
+
+background:rgba(255,255,255,0.05);  
+
+padding:40px 20px;  
+
+border-radius:25px;  
+  
+display:flex;  
+  
+flex-direction:column;  
+  
+align-items:center;  
+
+justify-content:center;  
+ 
+text-align:center;  
+
+padding:40px 25px;  
+
+transition:0.4s;  
+
+border:1px solid rgba(255,255,255,0.08);  
+
+backdrop-filter:blur(10px);
+
+}
+
+.feature-card:hover{
+transform:translateY(-10px);
+
+box-shadow:  
+0 10px 30px rgba(0,212,255,0.25);
+
+}
+
+.feature-card h3{
+font-size:1.8rem;
+
+margin-bottom:20px;  
+
+color:#00d4ff;
+
+}
+
+.feature-card p{
+color:#d0d0d0;
+
+line-height:1.6;
+
+}
+
+/* =========================
+PLANS GRID
+========================= */
+.plan-grid{
+display:grid;
+
+grid-template-columns:  
+repeat(auto-fit,minmax(300px,1fr));  
+
+gap:35px;
+
+}
+
+/* =========================
+CARD
+========================= */
+.card{
+background:rgba(255,255,255,0.05);
+
+border-radius:25px;  
+
+overflow:hidden;  
+
+transition:0.4s;  
+
+border:1px solid rgba(255,255,255,0.08);  
+
+backdrop-filter:blur(10px);
+
+}
+
+.card:hover{
+transform:translateY(-12px);
+
+box-shadow:  
+0 15px 35px rgba(0,212,255,0.3);
+
+}
+
+/* =========================
+CARD IMAGE
+========================= */
+.card img{
+width:100%;
+height:320px;
+
+object-fit:cover;  
+
+transition:0.5s;
+
+}
+
+.card:hover img{
+transform:scale(1.05);
+}
+
+/* =========================
+CARD CONTENT
+========================= */
+.card-content{
+padding:25px;
+}
+
+.card-content h3{
+font-size:2rem;
+
+margin-bottom:10px;  
+
+color:#00d4ff;
+
+}
+
+.card-content p{
+color:#d0d0d0;
+
+line-height:1.6;  
+
+margin-bottom:20px;
+
+}
+
+/* =========================
+PRICE
+========================= */
+.price{
+font-size:1.7rem;
+font-weight:800;
+}
+
+/* =========================
+BUTTON
+========================= */
+.buy-btn{
+display:inline-block;
+
+margin-top:20px;  
+
+padding:12px 28px;  
+
+border-radius:30px;  
+
+text-decoration:none;  
+
+background:  
+linear-gradient(45deg,#00d4ff,#0066ff);  
+
+color:white;  
+font-weight:700;  
+
+transition:0.3s;
+
+}
+
+.buy-btn:hover{
+transform:scale(1.05);
+
+box-shadow:  
+0 0 20px rgba(0,212,255,0.5);
+
+}
+
+/* =========================
+QUOTE SECTION
+========================= */
+.quote-section{
+padding:120px 20px;
+
+text-align:center;  
+
+background:  
+linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),  
+url('https://images.unsplash.com/photo-1518611012118-fb0f2d5d1b16?q=80&w=1600&auto=format&fit=crop');  
+
+background-size:cover;  
+background-position:center;
+
+}
+
+.quote-section h2{
+font-size:3rem;
+
+max-width:900px;  
+margin:auto;  
+
+color:#00d4ff;  
+
+text-shadow:  
+0 0 20px rgba(0,212,255,0.5);
+
+}
+
+/* =========================
+FOOTER
+========================= */
+footer{
+padding:30px;
+
+text-align:center;  
+
+background:#05070d;  
+
+border-top:1px solid rgba(255,255,255,0.08);  
+
+color:#8a8a8a;  
+
+line-height:1.7; /* espacio entre lineas de bloques de texto */
+
+}
+
+footer p{
+
+margin-bottom:12px;
+
+}
+/* =========================
+RESPONSIVE
+========================= */
+@media(max-width:900px){
+
+.hero-content h1{  
+    font-size:3rem;  
+}  
+
+.section-title{  
+    font-size:2.3rem;  
+}  
+
+.quote-section h2{  
+    font-size:2rem;  
+}  
+
+nav{  
+    display:none;  
+}  
+ 
+.footer-links{  
+margin-top:15px 0;
+
+}
+
+.footer-links a{
+margin:0 10px;
+color:#8a8a8a;
+text-decoration:none;
+font-size:0.9rem;
+transition:0.3s;
+}
+
+.footer-links a:hover{
+color:#00d4ff;
+}
+
+/* AVISO LEGAL */
+.disclaimer{
+margin-top:20px;
+font-size:0.8rem;
+color:#666;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+line-height:1.6;
+}
+
+}
+
+a{
+text-decoration: none;
+color: inherit;
+} 
