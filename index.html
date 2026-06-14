@@ -26,7 +26,7 @@
     <span>Guerreros del Cielo</span>
     </a>
 
-        <nav>
+        <nav id="nav-menu">
             <a href="#">Inicio</a>
             <a href="rutinas.html">Rutinas</a>
             <a href="transformaciones.html">Transformaciones</a>
@@ -266,6 +266,13 @@ window.addEventListener("scroll", function(){
 });
 
 document.getElementById("year").textContent =new Date().getFullYear();
+
+function toggleMenu(){
+    document.getElementById("nav-menu")
+            .classList.toggle("active");
+}
+
+document.querySelector(".menu-toggle").addEventListener("click", toggleMenu);
 
 </script>
 </body>
